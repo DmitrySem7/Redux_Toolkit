@@ -6,7 +6,7 @@ import {InputField} from "./components/InputField";
 import {addNewTodo, fetchTodos} from "./store/todoSlice";
 
 function App() {
-  const [text,setText] = useState('');
+    const [text,setText] = useState('');
     const dispatch = useDispatch();
     const {status,error} = useSelector(state => state.todos);
   const addTask= () => {
