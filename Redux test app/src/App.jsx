@@ -4,6 +4,7 @@ import './App.css'
 import {TodoList} from './components/Todo/TodoList'
 import {InputField} from "./components/InputField";
 import {addNewTodo, fetchTodos} from "./store/todoSlice";
+import {Filter} from "./components/Todo/Filter";
 
 function App() {
     const [text,setText] = useState('');
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
        <div>
+           <Filter/>
            <InputField text={text} handleSubmit={addTask} handleInput={setText}/>
            {status === 'loading' && <h2>Loading...</h2>}
            {error && <h2>An error occerd: {error}</h2>}
